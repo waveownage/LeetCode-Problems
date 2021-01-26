@@ -1,0 +1,25 @@
+Check If All 1's Are at Least Length K Places Away
+Given an array nums of 0s and 1s and an integer k, return True if all 1's are at least k places away from each other, otherwise return False.
+
+class Solution(object):
+    def kLengthApart(self,nums, k):
+        distance = 0
+        check = 0
+        for i in nums:
+            if i == 1:
+                if distance == 0 and check == 1:
+                    if k !=0:
+                        return False
+                    else:
+                        continue
+                if distance != 0:
+                    if distance < k:
+                        return False
+                distance = 0
+                check = +1
+            else:
+                distance += 1
+                check = 0
+        return True
+        
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

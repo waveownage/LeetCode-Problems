@@ -1,1 +1,24 @@
+Sum of Digits / Digital Root
 
+Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.
+
+def digital_root(n):
+    string = str(n)
+    list = []
+    sum = 0
+    for i in string:
+        list.append(int(i))
+    for j in list:
+        sum += j
+    while len(str(sum)) > 1:
+        list = []
+        string = str(sum)
+        sum = 0
+        for i in string:
+            list.append(int(i))
+        for j in list:
+            sum += j
+    return sum
+   
+   
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

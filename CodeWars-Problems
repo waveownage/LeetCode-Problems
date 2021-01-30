@@ -22,3 +22,50 @@ def digital_root(n):
    
    
    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+IQ Test
+
+Bob is preparing to pass IQ test. The most frequent task in this test is to find out which one of the given numbers differs from the others. Bob observed that one number usually differs from the others in evenness. Help Bob — to check his answers, he needs a program that among the given numbers finds one that is different in evenness, and return a position of this number.
+
+def iq_test(numbers):
+    string = (numbers.split(" "))
+    number = []
+    for i in string:
+        number.append(int(i))    
+    count = 0
+    even = 0
+    odd = 0
+    firstcase = 0
+    for i in number:
+        if i % 2 == 0 and count == 0: 
+            even += 1
+            count +=1
+            firstcase = i
+        if i % 2 != 0 and count == 0:
+            odd += 1
+            count +=1
+            firstcase = i
+        if i % 2 == 0 and count > 0:
+            if firstcase % 2 != 0 and number.index(i) == 1:
+                if number[number.index(i) + 1] % 2 != 0:
+                    return number.index(i) + 1
+                else:
+                    return number.index(firstcase) +1
+            if even > 0:
+                continue
+            else:
+                return number.index(i) + 1
+        if i % 2 != 0 and count > 0:
+            if firstcase % 2 == 0 and number.index(i) == 1:
+                if number[number.index(i) + 1] % 2 == 0:
+                    return number.index(i) + 1
+                else:
+                    return number.index(firstcase) +1
+            if odd > 0:
+                continue
+            else:
+                return number.index(i) + 1
+                
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+ 

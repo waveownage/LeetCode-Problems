@@ -117,4 +117,26 @@ def create_phone_number(n):
     number = "(" + str(n[0]) + str(n[1]) + str(n[2]) + ") " + str(n[3]) + str(n[4]) + str(n[5]) +"-" + str(n[6]) + str(n[7]) + str(n[8]) + str(n[9])
     return number
     
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Array.diff
+Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+
+It should remove all values from list a, which are present in list b.
+
+def array_diff(a, b):
+    solution = []
+    for i in a:
+        solution.append(i)
+        for j in b:
+            if i != j:
+                continue
+            if i == j:
+                solution.remove(i)
+    return solution
+    
+    
+
+  
+    
     

@@ -150,7 +150,35 @@ def array_diff(a, b):
             string += "("
     return string
     
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
+    Find the missing letter
+    
+    Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.
+
+You will always get an valid array. And it will be always exactly one letter be missing. The length of the array will always be at least 2.
+The array will always contain letters in only one case.
+    
+    def find_missing_letter(chars):
+    
+    alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    first= chars[0].lower()
+    start = alphabet.index(first)
+    newlist = alphabet[start:]
+    for i in newlist:
+        a = i.upper()
+        print(chars.count(a))
+        b = i.lower()
+        if chars.count(a) == 1 or chars.count(b) == 1:
+            continue
+        else:
+            if alphabet.count(chars[0]) == 0:
+                return a
+            else: 
+                return b 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
     
     
 

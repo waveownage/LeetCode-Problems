@@ -177,11 +177,12 @@ The array will always contain letters in only one case.
             else: 
                 return b 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+  Multiply 
 
-    
-    
-
+def multiply(a, b): 
+    c = a * b
+    return c
   
     
     

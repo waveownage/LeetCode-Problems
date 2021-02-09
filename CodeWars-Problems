@@ -183,6 +183,29 @@ The array will always contain letters in only one case.
 def multiply(a, b): 
     c = a * b
     return c
+    
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Counting Duplicates
+ 
+ Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+ 
+ def duplicate_count(text):
+    dictionary = {}
+    result = 0
+    for i in text:
+        if i.isalpha() == True:
+            i = i.upper() 
+        if i in dictionary:
+            dictionary[i] = dictionary[i] + 1
+        else:
+            dictionary[i] = 1
+    for j in dictionary:
+        if dictionary[j] > 1:
+            result += 1
+        else:
+            continue
+    return result
+ 
   
     
     
